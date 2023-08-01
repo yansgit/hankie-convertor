@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HaNKie COnVertoR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="hankie1.png" />
+</head>
+
+<body>
+  <form action="#">
+    <div class="okraj">
+      <table>
+        <tr>
+          <td colspan="2">
+            <h1>&nbsp HaNKie COnVertoR &nbsp</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>Váš text:</td>
+          <td>
+            <textarea id="input_text" cols="45" rows="10" placeholder="Tady napište text který chcete převést..." oninput="transformText()" onkeydown="handleKeyDown(event)"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Převedený text:</td>
+          <td>
+            <textarea id="output_text" cols="45" rows="10" placeholder="Zde se objeví váš převedený text..." readonly></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="copyText()" class="copy">Zkopírovat</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button id="info_text" class="info-text">Text zkopírován!</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

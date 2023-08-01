@@ -17,7 +17,7 @@ function transformText() {
     output_textElement.value = transformed_text;
 }
 
-function handleKeyDown(event) {
+function vymazat() {
     if (event.key === "Backspace" || event.key === "Delete") {
         setTimeout(() => {
             const transformed_text = document.getElementById("input_text").value;
@@ -31,6 +31,7 @@ function copyText() {
     const output_textElement = document.getElementById("output_text");
     output_textElement.select();
     document.execCommand("copy");
+    output_textElement.style.background = "url(pozadi2.png)";
 
     const info_textElement = document.getElementById("info_text");
     info_textElement.style.opacity = "100";
@@ -39,5 +40,6 @@ function copyText() {
     setTimeout(() => {
         info_textElement.style.opacity = "0";
         info_textElement.style.visibility = "hidden";
+        output_textElement.style.background = "transparent";
     }, 3000);
 }

@@ -31,15 +31,15 @@ function copyText() {
     const output_textElement = document.getElementById("output_text");
     output_textElement.select();
     document.execCommand("copy");
-    output_textElement.style.background = "url(pozadi2.png)";
+    output_textElement.style.background = "rgba(214, 122, 68, 0.3)";
 
     const info_textElement = document.getElementById("info_text");
     info_textElement.style.opacity = "100";
     info_textElement.style.visibility = "visible";
 
     setTimeout(() => {
+        output_textElement.style.background = "transparent";
         info_textElement.style.opacity = "0";
         info_textElement.style.visibility = "hidden";
-        output_textElement.style.background = "transparent";
-    }, 3000);
+    }, 1500);
 }

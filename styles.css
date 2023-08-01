@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+::selection {
+    background-color: #d67a44;
+}
+
 body {
     background: url(pozadi5.png);
     background-size: cover;
@@ -52,7 +56,7 @@ textarea {
 }
 
 textarea:focus {
-    box-shadow: 0 0 15px rgba(214, 122, 68, 0.871);
+    box-shadow: 0 0 15px rgba(214, 122, 68, 0.5);
 }
 
 h1 {
@@ -83,12 +87,17 @@ h1 {
     color: white;
     background: transparent;
     padding: 6px;
-    border: 2px solid #003a05;
+    border: 2px solid rgba(214, 122, 68, 0.5);
     border-radius: 5px;
     width: 100%;
     display: block;
-    box-shadow: 0 0 15px #003a05;
+    box-shadow: 0 0 15px rgba(214, 122, 68, 0.5);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s linear,opacity 0.3s linear;
+    animation: beat 0.25s infinite alternate;
+}
+
+@keyframes beat {
+    to {opacity: 0.25;}
 }
